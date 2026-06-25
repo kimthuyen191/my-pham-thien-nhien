@@ -1,328 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mộc Nhiên Beauty | Lành cho da - An cho tâm</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-body {
-    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-    background-color: #fcfaf4;
-    color: #3c2f2f;
-    line-height: 1.6;
-}
-.container {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
+    <div class="top-banner">
+        <p>Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 99.000 đ</p>
+    </div>
 
-/* TOP RUNNING BAR */
-.top-banner {
-    background-color: #1a1515;
-    color: #dfd5c6;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#sanpham">Sản phẩm</a>
+                <a href="#dangbai">Đăng bài</a>
+            </div>
+            
+            <a class="logo" href="#">the <span>mộc nhiên</span><br><small>ORIGINAL VIETNAM</small></a>
+            
+            <div class="nav-right">
+                <a href="https://www.facebook.com/profile.php?id=61591072467059&locale=vi_VN" target="_blank">Liên hệ</a>
+                <a href="#dangbai" class="admin-link">Góc Quản Trị</a>
+                <a href="#" class="cart-icon"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </nav>
 
-/* NAVBAR TINH TẾ */
-.navbar {
-    background-color: #fcfaf4;
-    border-bottom: 1px solid #ede7dc;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 0;
-}
-.nav-container {
-    max-width: 1250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-.nav-left, .nav-right {
-    display: flex;
-    gap: 35px;
-    align-items: center;
-}
-.nav-container a {
-    text-decoration: none;
-    color: #3c2f2f;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-.nav-container a:hover {
-    color: #a08144;
-}
-.navbar .logo {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: #a08144;
-}
-.navbar .logo span {
-    font-size: 1.6rem;
-    display: block;
-}
-.navbar .logo small {
-    font-size: 0.65rem;
-    letter-spacing: 4px;
-    color: #777;
-}
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>MỘC NHIÊN BEAUTY</h1>
+            <p class="slogan">“Lành cho da – An cho tâm – Xanh cho đời”</p>
+            <p class="description">
+                Tôn vinh vẻ đẹp tự nhiên của người phụ nữ, giúp bạn tự tin hơn với làn da khỏe mạnh 
+                và tinh thần thư giãn bằng các sản phẩm thuần chay chiết xuất 100% từ thảo mộc hữu cơ bản địa.
+            </p>
+            <a href="#sanpham" class="btn-hero">KHÁM PHÁ NGAY</a>
+        </div>
+    </header>
 
-.hero {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=1200') no-repeat center center/cover;
-    padding: 140px 20px;
-    text-align: center;
-    color: white;
-}
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(26, 21, 21, 0.65);
-    z-index: 1;
-}
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.hero h1 {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-.hero .slogan {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 1.6rem;
-    color: #dfd5c6;
-    font-style: italic;
-    margin-bottom: 25px;
-}
-.hero .description {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 35px;
-    font-weight: 300;
-}
-.btn-hero {
-    display: inline-block;
-    background-color: #a08144;
-    color: white;
-    padding: 14px 45px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-.btn-hero:hover {
-    background-color: #fcfaf4;
-    color: #1a1515;
-    transform: translateY(-2px);
-}
+    <section class="container" id="sanpham">
+        <div class="section-title">
+            <h2>Sản Phẩm Từ Thiên Nhiên</h2>
+            <div class="line"></div>
+        </div>
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.section-title h2 {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 2.2rem;
-    color: #1a1515;
-    font-weight: 500;
-}
-.section-title .line {
-    width: 50px;
-    height: 2px;
-    background-color: #a08144;
-    margin: 15px auto 0;
-}
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
+        <div class="product-grid" id="productContainer">
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="images/Vitamin C Serum.jpg" alt="Serum Vitamin C" onerror="this.src='images/Vitamin C Serum.jpg.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Serum Vitamin C</h3>
+                    <p class="price">120.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Serum Vitamin C vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
 
-.product-card {
-    background: #ffffff;
-    border: 1px solid #ede7dc;
-    padding: 25px 20px;
-    text-align: center;
-    border-radius: 4px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(58, 47, 47, 0.08);
-    border-color: #a08144;
-}
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="C:\Users\admin\Documents\Baitap SEO\Code web\images\Dầu gội thảo dược.jpg.jpg" alt="Dầu gội thảo dược" onerror="this.src='images/Dầu gội thảo dược.jpg.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Dầu Gội Thảo Dược Bồ Kết</h3>
+                    <p class="price">150.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Dầu gội vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
 
-.img-box {
-    background-color: #fbf9f1;
-    padding: 30px 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.img-box img {
-    max-height: 220px;
-    max-width: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-}
-.product-card:hover .img-box img {
-    transform: scale(1.06);
-}
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="images/Sữa rửa mặt trà xanh.jpg" alt="Sữa rửa mặt trà xanh" onerror="this.src='images/Sữa rửa mặt trà xanh.jpg.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Sữa Rửa Mặt Trà Xanh</h3>
+                    <p class="price">160.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Sữa rửa mặt vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
 
-.product-info h3 {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 1.25rem;
-    color: #1a1515;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-.product-info .price {
-    font-size: 1.05rem;
-    color: #a08144;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="images/Kem dưỡng ẩm nha đam.jpg" alt="Kem dưỡng ẩm nha đam" onerror="this.src='images/Kem dưỡng ẩm nha đam.jpg.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Kem Dưỡng Ẩm Nha Đam</h3>
+                    <p class="price">180.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Kem dưỡng ẩm nha đam vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
 
-.btn-buy {
-    background: transparent;
-    border: 1px solid #1a1515;
-    color: #1a1515;
-    width: 100%;
-    padding: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-.btn-buy:hover {
-    background: #1a1515;
-    color: #fcfaf4;
-}
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="images/Mặt nạ mật ong.png.jpg.jpg" onerror="this.src='images/Mặt nạ mật ong.png.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Mặt Nạ Mật Ong</h3>
+                    <p class="price">200.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Mặt nạ mật ong vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
 
-.admin-wrapper {
-    background-color: #f3efe6;
-    padding: 50px;
-    border-radius: 4px;
-}
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-.form-group.full-width {
-    grid-column: span 2;
-}
-.form-group label {
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    color: #5a4b4b;
-}
-.form-group input, .form-group textarea {
-    padding: 12px;
-    background: #fcfaf4;
-    border: 1px solid #ede7dc;
-    outline: none;
-    font-family: inherit;
-    font-size: 0.95rem;
-}
-.form-group input:focus, .form-group textarea:focus {
-    border-color: #a08144;
-}
-.btn-submit {
-    grid-column: span 2;
-    background-color: #1a1515;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-submit:hover {
-    background-color: #a08144;
-}
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="images/Kem dưỡng trắng da.jpg" alt="Kem dưỡng trắng da" onerror="this.src='images/Kem dưỡng trắng da.jpg.jpg';">
+                </div>
+                <div class="product-info">
+                    <h3>Kem Dưỡng Trắng Da</h3>
+                    <p class="price">220.000 đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm Kem dưỡng trắng da vào giỏ!')">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-footer {
-    background-color: #1a1515;
-    color: #dfd5c6;
-    padding: 50px 20px;
-    text-align: center;
-}
-footer h3 {
-    text-transform: uppercase;
-    font-family: 'Playfair Display', 'Georgia', serif;
-    letter-spacing: 3px;
-    font-size: 1.4rem;
-    color: #fff;
-}
-.slogan-foot {
-    font-style: italic;
-    color: #a08144;
-    margin: 10px 0 20px;
-}
-.dtu {
-    font-size: 0.85rem;
-    opacity: 0.7;
-}
-.copyright {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    border-top: 1px solid #2d2525;
-    padding-top: 20px;
-    opacity: 0.4;
-}
+    <section class="container" id="dangbai">
+        <div class="admin-wrapper">
+            <div class="section-title">
+                <h2>Đăng Bài Viết Sản Phẩm Mới</h2>
+                <p>Nhập thông tin để cập nhật sản phẩm động hiển thị ngay lên giao diện web</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Tên sản phẩm</label>
+                    <input type="text" id="formTen" placeholder="Ví dụ: Tẩy Tế Bào Chết Cà Phê">
+                </div>
+                <div class="form-group">
+                    <label>Giá bán (đ)</label>
+                    <input type="number" id="formGia" placeholder="Ví dụ: 140000">
+                </div>
+                <div class="form-group">
+                    <label>Đường dẫn file ảnh sản phẩm</label>
+                    <input type="text" id="formAnh" placeholder="images/Vitamin C Serum.jpg">
+                </div>
+                <div class="form-group full-width">
+                    <label>Mô tả công dụng bài viết ngắn</label>
+                    <textarea id="formMoTa" rows="3" placeholder="Nhập công dụng chính..."></textarea>
+                </div>
+                <button class="btn-submit" onclick="dangBaiMoi()">XÁC NHẬN ĐĂNG BÀI</button>
+            </div>
+        </div>
+    </section>
 
-@media (max-width: 768px) {
-    .hero-container, .form-grid {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-    }
-    .form-group.full-width, .btn-submit {
-        grid-column: span 1;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .nav-left, .nav-right {
-        gap: 15px;
-    }
-}
+    <footer>
+        <div class="footer-container">
+            <h3>the mộc nhiên original vietnam</h3>
+            <p class="slogan-foot">Lành cho da – An cho tâm – Xanh cho đời</p>
+            <p class="dtu">Báo cáo thực hành đồ án - Nhóm 3 - Đại học Duy Tân (DTU)</p>
+            <p class="copyright">&copy; 2026 Mộc Nhiên Beauty. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function dangBaiMoi() {
+            var ten = document.getElementById('formTen').value;
+            var gia = document.getElementById('formGia').value;
+            var anh = document.getElementById('formAnh').value;
+            var mota = document.getElementById('formMoTa').value;
+
+            if(ten == "" || gia == "" || mota == "") {
+                alert("Vui lòng điền đầy đủ thông tin sản phẩm trước khi đăng!");
+                return;
+            }
+
+            var container = document.getElementById('productContainer');
+            var newCard = document.createElement('div');
+            newCard.className = 'product-card';
+            newCard.innerHTML = `
+                <div class="img-box">
+                    <img src="${anh}" alt="${ten}" onerror="this.src='https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400';">
+                </div>
+                <div class="product-info">
+                    <h3>${ten}</h3>
+                    <p class="price">${Number(gia).toLocaleString('vi-VN')} đ</p>
+                    <button class="btn-buy" onclick="alert('Đã thêm ' + ten + ' vào giỏ!')">MUA NGAY</button>
+                </div>
+            `;
+            container.appendChild(newCard);
+
+            // Làm sạch ô nhập liệu
+            document.getElementById('formTen').value = "";
+            document.getElementById('formGia').value = "";
+            document.getElementById('formAnh').value = "";
+            document.getElementById('formMoTa').value = "";
+            alert("Đã đăng bài viết sản phẩm mới lên website thành công!");
+        }
+    </script>
+</body>
+</html>
